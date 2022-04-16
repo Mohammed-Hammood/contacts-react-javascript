@@ -1,0 +1,208 @@
+* {
+    padding:0;
+    margin:0;
+    scroll-behavior: smooth;
+}
+.main-content-container {
+    width:100%;
+    padding:0;
+    margin-top:50px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.svg {
+    width:14px;
+}
+
+.loader-container {
+    width:100%;
+    height:100%;
+    position:fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @keyframes LOADER {
+        from {
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    div, span, .loader {
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        border: 10px solid white;
+        border-top: 10px solid blue;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        animation:LOADER 1s linear infinite;
+    }
+}
+.scroller-container {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid silver;
+    border-radius: 50%;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    animation: Scroller 1s linear 1;
+    cursor: pointer;
+    svg {
+        height:15px;
+        width:15px;
+    }
+}
+.scroller-container:hover {
+    opacity: 1;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes Scroller {
+    from {
+        width:0;
+        height:0;
+    }
+    to{
+        height:35px;
+        width:35px;
+    }
+}
+.darkMode-container {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    left: -20px;
+    display: block;
+    position: fixed;
+    bottom: 109px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    transition:left 0.3s ease-out;
+    cursor:pointer;
+    opacity: 0.5;
+    span {
+        height: 20px;
+        width: 20px;
+        display: block;
+        border-radius: 50%;
+    }
+    .light {
+        background-color: white;
+    }
+    .dark {
+        background-color: #595959;
+       
+    }
+}
+.darkMode-container:hover {
+    left:0px;
+    opacity:1;
+
+}
+.light {
+    background-color:white;
+    color:black;
+    .shadow:hover {
+        box-shadow: 0 0 15px rgba(58, 58, 58, 0.5);
+    }
+}
+.dark {
+    background-color:  #6a6a6a;
+    color:white;
+    .scroller-container:hover {
+        box-shadow: 0 0 20px rgba(253, 253, 253, 1);
+    }
+    .profile-page-container .container .card, .home-page-container .container .contacts-list-container .contact, .home-page-container .container .panel-container, .contact-detail-page-container .container .contact {
+        background-color: rgba(255,255,255, 0.8);
+    }
+    .login-page-container .form-container form .buttons-container {
+        box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
+    }
+    .login-page-container .form-container form .inputs-container {
+        box-shadow: 0 8px 10px rgba(255, 255, 255, 0.5);
+    }
+    .login-page-container .form-container .header .active {
+        box-shadow: -4px -8px 10px rgba(255, 255, 255, 0.2);
+    }
+    .authentication-page-container .form-container form .buttons-container, .authentication-page-container .form-container form .inputs-container, .authentication-page-container .form-container .header .active{
+        background-color: #f0efef;
+        input {
+            background-color: #f0efef;
+        }
+    }
+    .login-page-container .form-container .header{
+
+        .active {
+            color:black;
+        }    
+        div {
+            color:white;
+        }
+    } 
+    .shadow:hover {
+        box-shadow: 0 0 15px rgb(255, 255, 255);
+    }
+}
+.hidden {
+    display: none;
+}
+.show-f {
+    display:flex;
+}
+.show-i-b {
+    display:inline-block;
+}
+.show-b {
+    display:block;
+}
+.blur {
+    filter:blur(8px);
+}
+.red {
+    color:red;
+    font-weight: bold;
+}
+.not-found-page-container {
+    display: flex;
+    justify-content:center;
+    margin-top:60px;
+    .warning-container {
+        width: 100%;
+        background-color: white;
+        max-width: 500px;
+        color:black;
+        padding:30px 10px;
+        display:flex;
+        justify-content: center;
+        text-align: center;
+        color:red;
+        border-radius:10px;
+        border: 1px solid lightgray;
+        flex-direction: column;
+        gap:10px;
+        justify-content: center;
+        display: flex;
+    }
+
+}

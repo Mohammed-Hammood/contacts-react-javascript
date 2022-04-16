@@ -1,0 +1,206 @@
+.home-page-container {
+    justify-content: center;
+    display: flex;
+    padding:10px;
+    margin-top:50px;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap:10px;
+    .warning-container {
+        display: flex;
+        justify-content:center;
+        width: 100%;
+        background-color: white;
+        max-width: 500px;
+        color:black;
+        padding:30px 10px;
+        border-radius:10px;
+        border: 1px solid lightgray;
+        flex-direction: column;
+        gap:10px;
+        div {
+            justify-content: center;
+            display: flex;
+        }
+        a  {
+            text-decoration: none;
+            color:blue;
+            font-weight: bold;
+            display: block;
+        }
+        .required-login {
+            border-radius: 10px;
+            border:5px;
+        }
+
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+        gap:10px;
+        flex-direction: column;
+        .panel-container {
+            flex:1 1 100%;
+            display:flex;
+            background-color: white;
+            color:black;
+            justify-content: space-between;
+            gap: 10px;
+            max-width: 500px;
+            flex:1 1 100%;
+            padding:10px;
+            border:1px groove lightgray;
+            font-size: 13px;
+            border-radius: 3px;
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                cursor: default;
+                span {
+                    display: flex;
+                    align-items: center;
+                }
+                svg {
+                    width:13px;
+                    cursor:pointer;
+                }
+            }
+            button {
+                background-color: blue;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                flex:1 1 50%;
+                color: white;
+                border-radius: 2px;
+                font-size:15px;
+            }
+            button:hover{
+                background-color:rgb(4, 0, 211);
+                color:white;
+            }
+        }
+        .paggination-container {
+            display: flex;
+            justify-content: center;
+            gap:10px;
+            height: 18px;
+            margin:15px 0;
+            font-size: 12px;
+            align-items: center;
+            .paggination-btn:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .paggination-btn, .disabled {
+                background-color: white;
+                border:1px solid lightgray;
+                border-radius:2px;
+                cursor:pointer;
+                height: 100%;
+                padding:10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    width:13px;
+                }
+            }
+            .paggination-current-page {
+                cursor: default;
+                border-radius:50%;
+                
+            }
+            .disabled {
+                cursor:default;
+                background-color:white;
+                opacity: 0.5;
+            }
+        }
+        .contacts-list-container {
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 523px;
+            flex:1 1 100%;
+            width: 100%;
+            font-size: 13px;
+            .contact:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            .contact {
+                border: 1px solid lightgray;
+                border-radius:5px;
+                padding:10px;
+                display: flex;
+                background-color: white;
+                color:black;
+                justify-content: center;
+                flex-direction: column;
+                gap:10px;
+                .first-group-container {
+                    display: flex;
+                    justify-content: space-between;
+                    .dropdown-menu-container:hover {
+                        ul{
+                            display: block;
+                        }
+                    }
+                
+                    .dropdown-menu-container {
+                        ul {
+                            display: none;
+                            list-style-type:none;
+                            border:1px solid lightgray;
+                            border-radius:5px;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+                            position:absolute;
+                            background-color: white;
+                            margin-left:-73px;
+                            margin-top:-5px;
+                            li:hover {
+                                background-color: #eee;
+                                cursor:pointer;
+                            }
+                            li {
+                                padding:5px 10px;
+                                font-size:13px;
+                            }
+                        }
+                        .svg-container {
+                            padding: 0 0 0 5px;
+                            cursor:pointer;
+                        }
+                    }
+                }
+                .name {
+                    font-size: 15px;
+                    cursor: default;
+                    font-weight: bold;
+                }
+                .detail {
+                    background:rgba(218, 209, 209, 0.1);
+                    padding: 7px;
+                    border-radius: 5px;
+                    a {
+                        text-decoration: none;
+                        color:blue;
+                        font-size:11px;
+                    }
+                }
+                svg {
+                    width:10px;
+                }
+                span {
+                    padding:5px;
+                }
+            }
+
+        }
+
+    }
+}

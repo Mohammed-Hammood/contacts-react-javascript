@@ -1,0 +1,151 @@
+$mainColor:white; //(0, 17, 255);
+$fontColor:black;
+$borderRadius: 10px;
+.authentication-page-container {
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    .form-container {
+        width:100%;
+        max-width: 500px;
+     
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+      //  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        transition:box-shadow 500ms;
+        .header {
+            display: flex;
+            justify-content: center;
+            gap:10px;
+            
+            div {
+                flex:1 1 50%;
+                color:black;
+                padding:10px;
+                text-align: center;
+                opacity: 0.5;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                cursor:pointer;
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .active {
+                background-color:$mainColor;
+                color:black;
+                opacity: 1;
+                border:1px solid lightgray;
+                border-bottom: none;
+                z-index: 1;
+                bottom:-1px;
+                font-size: 15px;
+                position: relative;
+                font-weight: bold;
+                box-shadow: -4px -8px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction:column;
+            border-bottom-left-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+            .r-b-r {
+                border-top-right-radius: $borderRadius;
+                overflow: hidden;
+            }
+
+            .l-b-r {
+                border-top-left-radius:$borderRadius; 
+                overflow: hidden;
+            }
+            .inputs-container {
+                background-color: $mainColor;
+                display: flex;
+                overflow: hidden;
+                flex-direction: column;
+                border:1px solid lightgray;
+                border-bottom: none;
+                gap:10px;
+                padding: 16px;
+                box-shadow: 0 8px 10px rgba(0,0,0, 0.2);
+                .messages-container {
+                    color:black;
+                    font-size:13px;
+                    min-height:17px;
+                }
+                div{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    p {
+                        color:black;
+                        font-size:13px;
+                        span {
+                            cursor:pointer;
+                            color:blue;
+                        }
+                        span:hover{
+                            text-decoration:underline;
+                          
+                        }
+                    }
+                    label {
+                        color:$fontColor;
+                        font-size: 13px;
+                        span {
+                            color:$fontColor;
+                            color:red;
+                            //display: none;
+                        }
+                    }
+                    input:focus-visible {
+                        outline: 1px solid rgb(0, 81, 255);
+                    }
+                    input {
+                        flex:1 1 100%;
+                        border-radius:$borderRadius; 
+                        border:1px solid lightgray;
+                        padding:10px;
+                        font-size:13px;
+                    }
+                }
+            }
+            .buttons-container {
+                display: flex;
+                justify-content: flex-start;
+                gap:10px;
+                padding:10px;
+                background-color: white;
+                border:1px solid lightgray;
+                border-top: none;
+                padding-top:15px;
+                border-bottom-left-radius: $borderRadius; 
+                border-bottom-right-radius:$borderRadius; 
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+                button:hover {
+                    background-color: rgb(0, 0, 218);
+                }
+                button {
+                    border:none;
+                    flex:1 1 40%;
+                    border-radius:2px;
+                    border:none; //1px solid lightgray;
+                    padding:10px;
+                    background-color: rgb(0, 0, 255);
+                    color:white;
+                    cursor:pointer;
+                }
+                button:last-child {
+                    background-color: lightgray;
+                    color:blue;
+                    border:1px solid lightgray;
+                }
+            }
+        }
+    }
+}
