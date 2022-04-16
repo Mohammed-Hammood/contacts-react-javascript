@@ -7,6 +7,6 @@
 - Build it (npm run build)
 - Run it (npm start)
 
-##Info:
+## Info:
 - You need to log in first to show contacts list.
 - After log in successfully, you can add, delete, edit and also searh contacts.
